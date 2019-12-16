@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="backgroundClock" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.ClockController">
+   <children>
+      <HBox prefHeight="114.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="62.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="dateLabel" alignment="CENTER" prefHeight="22.0" prefWidth="600.0" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="clockLabel" alignment="CENTER" prefHeight="67.0" prefWidth="600.0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="55.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#stopBtn" style="-fx-background-color: ff4d4d;" text="STOP" translateX="271.0" translateY="-2.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="290.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="288.0" prefWidth="600.0">
+               <children>
+                  <TableView fx:id="alarmTable" prefHeight="218.0" prefWidth="600.0" styleClass="table">
+                    <columns>
+                      <TableColumn fx:id="timeCol" prefWidth="298.0" text="Time" />
+                      <TableColumn fx:id="dayCol" prefWidth="300.0" text="Date" />
+                    </columns>
+                  </TableView>
+                  <HBox prefHeight="36.0" prefWidth="600.0">
+                     <children>
+                        <Label layoutX="20.0" prefHeight="23.0" prefWidth="109.0" text="                  Hour : " textFill="WHITE" />
+                        <ComboBox fx:id="hourSelector" layoutX="20.0" prefHeight="25.0" prefWidth="70.0" />
+                        <Label layoutX="20.0" prefHeight="19.0" prefWidth="83.0" text="      Minute : " textFill="WHITE" />
+                        <ComboBox fx:id="minuteSelector" layoutX="20.0" prefHeight="27.0" prefWidth="70.0" />
+                        <Label layoutX="20.0" prefHeight="16.0" prefWidth="61.0" text="      Day : " textFill="WHITE" />
+                        <ComboBox fx:id="daySelector" prefHeight="23.0" prefWidth="145.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="600.0">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#addBtn" style="-fx-background-color: ffea00;" text="Add" translateX="250.0" />
+                        <Button mnemonicParsing="false" onMouseClicked="#deleteBtn" style="-fx-background-color: ffea00;" text="Delete" translateX="260.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></HBox>
+   </children>
+</VBox>

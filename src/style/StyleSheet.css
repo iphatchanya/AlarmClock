@@ -1,0 +1,15 @@
+.backgroundClock {
+    -fx-pref-height: 400;
+    -fx-pref-width: 600;
+    -fx-background-color: #1D1E2C;
+}
+
+.backgroundQuestion {
+    -fx-pref-height: 400;
+    -fx-pref-width: 600;
+    -fx-background-color: linear-gradient(to bottom, #464652, #1D1E2C);
+}
+
+.table {
+    -fx-background-color: #31323F;
+}
